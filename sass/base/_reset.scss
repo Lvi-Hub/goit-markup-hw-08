@@ -1,0 +1,39 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+  margin: 0;
+}
+
+ul {
+  /* list-style: none; */
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+
+.link {
+  text-decoration: none;
+  list-style: none;
+
+  transition-property: color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    transform: color;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

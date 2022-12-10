@@ -1,0 +1,71 @@
+//==================================
+// Rules
+//==================================
+
+.rules {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--general-wight);
+
+  &-container {
+  }
+  &-title {
+  }
+  &-list__text {
+    display: inline-flex;
+    flex-direction: column;
+
+    &::before {
+      margin-bottom: 30px;
+      content: "";
+      width: 270px;
+      height: 130px;
+      background-color: var(--section-bgr);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 70px 70px;
+      border-radius: 4px;
+    }
+    // &:nth-child(1)::before {
+    //   background-image: url(../images/antenna.svg);
+    // }
+    // &:nth-child(2)::before {
+    //   background-image: url(../images/clock.svg);
+    // }
+    // &:nth-child(3)::before {
+    //   background-image: url(../images/diagram.svg);
+    // }
+    // &:nth-child(4)::before {
+    //   background-image: url(../images/astronaut.svg);
+    // }
+
+    //------------------------------------------
+    //Випадковий експеремент!!!!
+    // Cписок у змінних: ,var.scss!!!
+    //------------------------------------------
+
+    @each $iconName in $rules-list-icons {
+      $idx: index($rules-list-icons, $iconName);
+
+      &:nth-child(#{$idx1})::before {
+        background-image: url(../images/#{$iconName}.svg);
+      }
+    }
+  }
+  &-list {
+    display: flex;
+    gap: 30px;
+
+    &__title {
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: calc(16 / 14);
+    }
+    &__item {
+      color: var(--secondary-text-color);
+      font-size: 14px;
+      line-height: calc(24 / 14);
+    }
+  }
+}

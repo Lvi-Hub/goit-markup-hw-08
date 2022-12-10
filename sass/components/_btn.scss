@@ -1,0 +1,56 @@
+/* Buttons styles */
+.btn {
+  @include centeredFlex; //mixin centeredFlex
+  font-family: "Roboto";
+  font-style: normal;
+  text-align: center;
+  &:hover,
+  &:focus {
+    color: var(--general-wight);
+    background-color: var(--accent-color);
+    transform: color, background-color;
+  }
+}
+.hero .btn {
+  width: 216px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: var(--general-wight);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  border-radius: 4px;
+}
+.filters-list .btn {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  letter-spacing: 0.03em;
+  color: var(--general-black);
+  background-color: var(--btn-background);
+  border-color: transparent;
+  border-radius: 4px;
+  transition-property: background-color, color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.filters-list .btn:hover,
+.filters-list .btn:focus {
+  color: var(--general-wight);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filters-list .btn-all {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 25px;
+  padding-right: 25px;
+}

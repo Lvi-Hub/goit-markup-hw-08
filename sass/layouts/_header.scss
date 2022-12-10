@@ -1,0 +1,123 @@
+//==================================
+// Header
+//==================================
+.header {
+  background-color: var(--general-wight);
+  border-bottom: 1px solid var(--secondary-frame-color);
+}
+
+.header-container {
+  @include centeredFlex; //mixin centeredFlex
+  height: 80px;
+}
+
+.link-logo {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+}
+
+.header .link-logo {
+  color: var(--general-black);
+}
+.logo-web {
+  color: var(--accent-color);
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+}
+.link-logo:hover,
+.link-logo:focus {
+  color: var(--accent-color);
+}
+
+.header-nav {
+  display: flex;
+  margin-right: auto;
+  height: 100%;
+}
+.header-list-text {
+}
+.header-list-text .current {
+  color: var(--accent-color);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.current::after {
+  display: inline-flex;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: #2196f3;
+  position: absolute;
+}
+
+.header-list {
+  display: flex;
+  margin-left: 93px;
+  gap: 50px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+}
+.header-list .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+}
+.header-list a {
+  color: var(--primary-text-color);
+}
+.header-contact a {
+}
+.header-contact-text a {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--secondary-text-color);
+  fill: var(--secondary-text-color);
+  transition-property: fill, color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-contact-text .contact-mail:hover,
+.header-contact-text .contact-mail:focus,
+.header-contact-text .contact-tel:hover,
+.header-contact-text .contact-tel:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+  transform: fill, color;
+}
+.contact-tel {
+}
+.contact-mail,
+.contact-tel {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.header-icon {
+  margin-right: 10px;
+}
