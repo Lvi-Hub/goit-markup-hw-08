@@ -39,7 +39,6 @@ portfolio             #F5F5F5
 }
 
 body {
-  min-width: 1600px;
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -87,7 +86,7 @@ img {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -651,9 +650,15 @@ img {
 }
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--section-bgr);
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .team-title {
   margin-bottom: 50px;
@@ -668,6 +673,7 @@ img {
   justify-content: center;
   gap: 30px;
   text-align: center;
+  flex-wrap: wrap;
 }
 .team-list-item {
   background-color: var(--general-wight);
