@@ -583,15 +583,13 @@ img {
   background-color: var(--general-wight);
 }
 .rules-list__text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-flex;
   flex-direction: column;
 }
 .rules-list__text::before {
   margin-bottom: 30px;
   content: "";
-  width: 100%;
+  width: 270px;
   height: 130px;
   background-color: var(--section-bgr);
   background-repeat: no-repeat;
