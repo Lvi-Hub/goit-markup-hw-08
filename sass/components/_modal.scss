@@ -13,8 +13,16 @@
 
 .modal {
   position: absolute;
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
+
+  @include tablet {
+  }
+  @include desktop {
+    width: 528px;
+    min-height: 581px;
+  }
+
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -37,10 +45,17 @@
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
-    line-height: calc(23 / 20);
+    line-height: calc(30 / 20);
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
+
+    @include tablet {
+    }
+    @include desktop {
+      font-size: 20px;
+      line-height: calc(23 / 20);
+    }
   }
   &-form {
     display: flex;
@@ -94,9 +109,14 @@
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 42px;
-
-  width: 448px;
+  width: 370px;
   height: 40px;
+  @include tablet {
+  }
+  @include desktop {
+    width: 448px;
+    height: 40px;
+  }
 
   font-family: "Roboto";
   font-style: normal;
@@ -149,8 +169,15 @@
 
 .input-feetback {
   resize: none;
-  width: 448px;
+  width: 370px;
   height: 120px;
+
+  @include tablet {
+  }
+  @include desktop {
+    width: 448px;
+    height: 40px;
+  }
 
   padding-top: 12px;
   padding-bottom: 12px;

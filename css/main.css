@@ -36,6 +36,14 @@ portfolio             #F5F5F5
   --frame-color: #eeeeee;
   --secondary-frame-color: #ececec;
   --svg-gray: #afb1b8;
+  --hero-grad: rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -44,6 +52,12 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 1.2;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -94,17 +108,17 @@ img {
 }
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 480px;
+    width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 720px;
+    width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 
@@ -138,7 +152,7 @@ img {
 }
 
 .hero .btn {
-  width: 216px;
+  width: 200px;
   height: 50px;
   font-weight: 700;
   font-size: 16px;
@@ -148,6 +162,18 @@ img {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .hero .btn {
+    width: 200px;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero .btn {
+    width: 216px;
+    height: 50px;
+  }
 }
 
 .filters-list .btn {
@@ -195,8 +221,8 @@ img {
 
 .modal {
   position: absolute;
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -210,16 +236,28 @@ img {
   padding-left: 40px;
   padding-right: 40px;
 }
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
+}
 .modal-title {
   margin-bottom: 40px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    font-size: 20px;
+    line-height: 1.15;
+  }
 }
 .modal-form {
   display: flex;
@@ -270,7 +308,7 @@ img {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 42px;
-  width: 448px;
+  width: 370px;
   height: 40px;
   font-family: "Roboto";
   font-style: normal;
@@ -285,6 +323,12 @@ img {
   transition-property: outline, transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .input-text {
+    width: 448px;
+    height: 40px;
+  }
 }
 
 .input-name {
@@ -318,7 +362,7 @@ img {
 
 .input-feetback {
   resize: none;
-  width: 448px;
+  width: 370px;
   height: 120px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -333,6 +377,12 @@ img {
   transition-property: outline, transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .input-feetback {
+    width: 448px;
+    height: 40px;
+  }
 }
 
 .input-text:hover,
@@ -375,6 +425,21 @@ img {
   background-color: var(--btn-hover-color);
 }
 
+.checkbox-fild {
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 370px;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox-fild {
+    justify-content: center;
+    width: 448px;
+  }
+}
+
 .checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -383,12 +448,21 @@ img {
 }
 .checkbox-text {
   margin-left: 8px;
-  font-size: 14px;
-  line-height: 1.7142857143;
+  font-size: 12px;
+  line-height: 1;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
+@media screen and (min-width: 1200px) {
+  .checkbox-text {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
+}
 .checkbox-link {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration: none;
   position: relative;
@@ -547,19 +621,62 @@ img {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 .hero-background {
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-image.jpg);
+  background-image: linear-gradient(var(--hero-grad)), url(../images/hero-bg-480.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: var(--hero-background);
+}
+@media screen and (min-width: 768px) {
+  .hero-background {
+    max-width: 768px;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-background {
+    max-width: 1600px;
+    height: 600px;
+  }
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-background {
+    background-image: linear-gradient(var(--hero-grad)), url(../images/hero-bg-480-2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-background {
+    background-image: linear-gradient(var(--hero-grad)), url(../images/hero-bg-768.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-background {
+    background-image: linear-gradient(var(--hero-grad)), url(../images/hero-bg-768-2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-background {
+    background-image: linear-gradient(var(--hero-grad)), url(../images/hero-bg-1200.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero-background {
+    background-image: linear-gradient(var(--hero-grad)), url(../images/hero-bg-1200-2x.jpg);
+  }
 }
 .hero-container {
   display: flex;
@@ -571,10 +688,16 @@ img {
   color: var(--general-wight);
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3636363636;
+  font-size: 26px;
+  line-height: 1.6153846154;
   text-align: center;
   letter-spacing: 0.06em;
+}
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.3636363636;
+  }
 }
 
 .rules {
@@ -612,7 +735,6 @@ img {
 .rules-list {
   display: flex;
   gap: 30px;
-  flex-wrap: wrap;
 }
 .rules-list__title {
   margin-bottom: 10px;
@@ -631,7 +753,7 @@ img {
   padding-bottom: 94px;
   background-color: var(--general-wight);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .development {
     display: none;
   }
@@ -684,9 +806,22 @@ img {
 .team-title {
   margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.1666666667;
+  font-size: 28px;
+  line-height: 1.1785714286;
   text-align: center;
+  letter-spacing: 0.03em;
+}
+@media screen and (min-width: 768px) {
+  .team-title {
+    font-size: 28px;
+    line-height: 1.1785714286;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-title {
+    font-size: 36px;
+    line-height: 1.1666666667;
+  }
 }
 .team-list {
   display: flex;
@@ -700,6 +835,17 @@ img {
   background-color: var(--general-wight);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .team-list-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-list-item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 .team-list-title {
   font-weight: 500;
