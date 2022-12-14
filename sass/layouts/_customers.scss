@@ -3,8 +3,14 @@
   background-color: var(--general-wight);
 }
 .customers__container {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include tablet {
+  }
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .customers__title {
   margin-bottom: 50px;
@@ -13,7 +19,6 @@
   text-align: center;
   letter-spacing: 0.03em;
   @include tablet {
-   
   }
   @include desktop {
     font-size: 36px;
@@ -27,7 +32,7 @@
   width: 100%;
 }
 .labels__item {
-  width: calc((100% - 30px) / 2);;
+  width: calc((100% - 30px) / 2);
   height: 92px;
   @include tablet {
     width: 226px;
