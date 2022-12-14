@@ -6,13 +6,13 @@
   /* padding-top: 94px; */
   padding-bottom: 94px;
   background-color: var(--general-wight);
-
+  display: none;
   @include tablet {
     // padding-top: 100px;
     // padding-bottom: 100px;
   }
   @include desktop {
-    display: none;
+    display:contents;
   }
 
   &-container {

@@ -104,7 +104,7 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  /* outline: 2px solid orange; */
+  outline: 1px solid orange;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -120,6 +120,10 @@ img {
   .container {
     width: 1200px;
   }
+}
+
+section {
+  outline: 1px solid black;
 }
 
 .visually-hidden {
@@ -221,7 +225,8 @@ img {
 
 .modal {
   position: absolute;
-  width: 450px;
+  max-width: 480px;
+  width: 100%;
   min-height: 609px;
   left: 50%;
   top: 50%;
@@ -236,9 +241,14 @@ img {
   padding-left: 40px;
   padding-right: 40px;
 }
+@media screen and (min-width: 768px) {
+  .modal {
+    max-width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
+    max-width: 528px;
     min-height: 581px;
   }
 }
@@ -301,6 +311,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   /* outline: 1px solid black; */
 }
 
@@ -308,7 +319,7 @@ img {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 42px;
-  width: 370px;
+  width: 100%;
   height: 40px;
   font-family: "Roboto";
   font-style: normal;
@@ -362,7 +373,7 @@ img {
 
 .input-feetback {
   resize: none;
-  width: 370px;
+  width: 100%;
   height: 120px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -380,8 +391,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .input-feetback {
-    width: 448px;
-    height: 40px;
+    max-width: 448px;
   }
 }
 
@@ -431,7 +441,7 @@ img {
   display: flex;
   justify-content: left;
   align-items: center;
-  width: 370px;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .checkbox-fild {
@@ -701,18 +711,58 @@ img {
 }
 
 .rules {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--general-wight);
+}
+@media screen and (min-width: 1200px) {
+  .rules {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.rules-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.rules-list__title {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1428571429;
+}
+@media screen and (min-width: 768px) {
+  .rules-list__title {
+    text-align: left;
+  }
+}
+.rules-list__item {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  line-height: 1.7142857143;
 }
 .rules-list__text {
   display: inline-flex;
   flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .rules-list__text {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .rules-list__text {
+    width: calc((100% - 90px) / 4);
+  }
 }
 .rules-list__text::before {
   margin-bottom: 30px;
   content: "";
-  width: 270px;
+  width: 100%;
   height: 130px;
   background-color: var(--section-bgr);
   background-repeat: no-repeat;
@@ -732,30 +782,16 @@ img {
 .rules-list__text:nth-child(4)::before {
   background-image: url(../images/astronaut.svg);
 }
-.rules-list {
-  display: flex;
-  gap: 30px;
-}
-.rules-list__title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.1428571429;
-}
-.rules-list__item {
-  color: var(--secondary-text-color);
-  font-size: 14px;
-  line-height: 1.7142857143;
-}
 
 .development {
   /* padding-top: 94px; */
   padding-bottom: 94px;
   background-color: var(--general-wight);
+  display: none;
 }
 @media screen and (min-width: 1200px) {
   .development {
-    display: none;
+    display: contents;
   }
 }
 .development-title {
@@ -912,20 +948,38 @@ img {
 
 .customers__title {
   margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.1666666667;
+  font-size: 28px;
+  line-height: 1.1785714286;
   text-align: center;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .customers__title {
+    font-size: 36px;
+    line-height: 1.1666666667;
+  }
 }
 
 .labels {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  width: 100%;
 }
 
 .labels__item {
-  width: 172px;
+  width: calc((100% - 30px) / 2);
   height: 92px;
+}
+@media screen and (min-width: 768px) {
+  .labels__item {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .labels__item {
+    width: 170px;
+  }
 }
 .labels__item:hover {
   border-color: var(--accent-color);

@@ -3,17 +3,18 @@
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  /* outline: 2px solid orange; */
+  outline: 1px solid orange;
 
-  @include mobibe{
+  @include mobibe {
     width: 480px;
-
   }
   @include tablet {
     width: 768px;
-
   }
   @include desktop {
     width: 1200px;
   }
+}
+section{
+  outline: 1px solid black;
 }
