@@ -57,7 +57,7 @@
 
     @include desktop {
       font-size: 14px;
-    line-height: calc(24 / 14);
+      line-height: calc(24 / 14);
       margin-bottom: 0px;
       align-items: flex-start;
     }
@@ -152,7 +152,10 @@
 
 .subscribe {
   margin-left: 0;
-  width: 470px;
+  width: 100%;
+  @include tablet {
+    width: 470px;
+  }
   @include desktop {
     width: 570px;
     margin-left: auto;
