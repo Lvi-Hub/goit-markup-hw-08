@@ -12,6 +12,9 @@ body {
   font-size: 16px;
   line-height: 1.2;
 }
+.no-scroll {
+  overflow: hidden;
+}
 
 img {
   display: block;

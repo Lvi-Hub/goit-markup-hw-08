@@ -104,5 +104,13 @@
     display: flex;
     justify-content: center;
     gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    @include tablet {
+      
+    }
+    @include desktop{
+      justify-content: center;
+    }
   }
 }

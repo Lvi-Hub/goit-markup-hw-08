@@ -7,24 +7,60 @@
   background-color: var(--hero-bgr-color);
 
   &-container {
-    @include centeredFlex; //mixin centeredFlex
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+    @include desktop {
+      @include centeredFlex; //mixin centeredFlex
+      flex-wrap: nowrap;
+    }
+  }
+  &-contacts {
+    width: 232px;
   }
 
+  // @include centeredFlex; //mixin centeredFlex
+
   .link-logo {
+    display: flex;
+    justify-content: center;
     padding-bottom: 20px;
     color: var(--general-wight);
+    // text-align: center;
+    @include desktop {
+      justify-content: left;
+    }
   }
 
   &-list {
+    margin-bottom: 60px;
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 9px;
 
     color: var(--general-wight);
     font-style: normal;
+
     font-size: 14px;
-    line-height: calc(24 / 14);
+    line-height: calc(28 / 14);
     letter-spacing: 0.03em;
+
+    @include desktop {
+      font-size: 14px;
+    line-height: calc(24 / 14);
+      margin-bottom: 0px;
+      align-items: flex-start;
+    }
   }
   &-address {
   }
@@ -47,21 +83,34 @@
   }
 
   &-soc {
-    margin-left: 70px;
+    width: 206px;
+    @include desktop {
+      margin-left: 70px;
+    }
+
     &-title {
       margin-bottom: 20px;
       font-weight: 700;
       font-size: 14px;
       line-height: calc(16 / 14);
       letter-spacing: 0.03em;
+      text-align: center;
       text-transform: uppercase;
       color: var(--general-wight);
+
+      @include desktop {
+        text-align: left;
+      }
     }
 
     &-list {
+      margin-bottom: 60px;
       display: flex;
       justify-content: center;
       gap: 10px;
+      @include desktop {
+        margin-bottom: 0px;
+      }
     }
 
     &-text {
@@ -102,22 +151,38 @@
 }
 
 .subscribe {
-  margin-left: auto;
+  margin-left: 0;
+  width: 470px;
+  @include desktop {
+    width: 570px;
+    margin-left: auto;
+  }
 
   &-title {
     margin-bottom: 20px;
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
+    text-align: center;
     text-transform: uppercase;
     color: var(--general-wight);
+    @include desktop {
+      text-align: left;
+    }
   }
   &-input-field {
+    flex-wrap: wrap;
+    text-align: left;
     @include centeredFlex; //mixin centeredFlex
-    gap: 12px;
+    gap: 20px;
+    width: 100%;
+    @include desktop {
+      flex-wrap: nowrap;
+      gap: 12px;
+    }
   }
   &-input-text {
-    width: 358px;
+    width: 100%; //358px;
     height: 50px;
 
     padding-top: 15px;

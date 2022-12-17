@@ -3,7 +3,7 @@
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid orange;
+  // outline: 1px solid orange;
 
   @include mobibe {
     width: 480px;
@@ -16,5 +16,5 @@
   }
 }
 section{
-  outline: 1px solid black;
+  // outline: 1px solid black;
 }
