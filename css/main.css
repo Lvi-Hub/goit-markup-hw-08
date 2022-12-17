@@ -130,10 +130,6 @@ img {
   }
 }
 
-section {
-  outline: 1px solid black;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
