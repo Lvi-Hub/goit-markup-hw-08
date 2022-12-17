@@ -1405,10 +1405,21 @@ img {
 .example-list-item {
   display: block;
   box-sizing: border-box;
-  width: 370px;
+  max-width: 450px;
+  width: 100%;
 }
 .example-list-item:hover .example-hidden-text {
   transform: translateY(0%);
+}
+@media screen and (min-width: 768px) {
+  .example-list-item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .example-list-item {
+    width: 370px;
+  }
 }
 .example-link {
   display: block;
@@ -1482,6 +1493,11 @@ img {
   gap: 8px;
   flex-wrap: wrap;
   justify-content: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .filters-list {
+    justify-content: center;
+  }
 }
 @media screen and (min-width: 1200px) {
   .filters-list {
