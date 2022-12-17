@@ -7,8 +7,9 @@
 }
 
 .header-container {
-  @include centeredFlex; //mixin centeredFlex
   height: 60px;
+  @include centeredFlex; //mixin centeredFlex
+  
   @include tablet {
     height: 80px;
   }
